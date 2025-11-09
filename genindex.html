@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Index &mdash; PyAutoCausal 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=01f34227"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            PyAutoCausal
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started with PyAutoCausal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#your-first-analysis-feature-rollout-impact">Your First Analysis: Feature Rollout Impact</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html#step-1-prepare-your-data">Step 1: Prepare Your Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html#step-2-run-the-analysis">Step 2: Run the Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html#step-3-examine-the-results">Step 3: Examine the Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html#step-4-interpret-your-results">Step 4: Interpret Your Results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#understanding-what-pyautocausal-did">Understanding What PyAutoCausal Did</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#common-data-scenarios">Common Data Scenarios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html#scenario-1-single-time-period-cross-sectional">Scenario 1: Single Time Period (Cross-sectional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html#scenario-2-single-treated-unit">Scenario 2: Single Treated Unit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html#scenario-3-large-dataset">Scenario 3: Large Dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html#common-issues">Common Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html#getting-help">Getting Help</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data-requirements.html">Data Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data-requirements.html#core-data-structure">Core Data Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data-requirements.html#required-columns">Required Columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data-requirements.html#optional-columns">Optional Columns</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data-requirements.html#example-dataset-structure">Example Dataset Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-requirements.html#data-formatting-requirements">Data Formatting Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data-requirements.html#treatment-variable-treat">1. Treatment Variable (<code class="docutils literal notranslate"><span class="pre">treat</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data-requirements.html#time-variable-t">2. Time Variable (<code class="docutils literal notranslate"><span class="pre">t</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data-requirements.html#unit-id-id-unit">3. Unit ID (<code class="docutils literal notranslate"><span class="pre">id_unit</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data-requirements.html#missing-values">4. Missing Values</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data-requirements.html#common-data-scenarios">Common Data Scenarios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data-requirements.html#scenario-1-staggered-treatment-adoption">Scenario 1: Staggered Treatment Adoption</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data-requirements.html#scenario-2-geographic-policy-analysis">Scenario 2: Geographic Policy Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data-requirements.html#scenario-3-marketing-campaign-analysis">Scenario 3: Marketing Campaign Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data-requirements.html#data-validation">Data Validation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data-requirements.html#common-validation-issues">Common Validation Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data-requirements.html#data-size-considerations">Data Size Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data-requirements.html#minimum-requirements">Minimum Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data-requirements.html#performance-guidelines">Performance Guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data-requirements.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data-requirements.html#data-quality">1. Data Quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data-requirements.html#treatment-timing">2. Treatment Timing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data-requirements.html#outcome-variable">3. Outcome Variable</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="causal-methods.html">Causal Methods Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="causal-methods.html#method-selection-logic">Method Selection Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="causal-methods.html#available-methods">Available Methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="causal-methods.html#cross-sectional-analysis">1. Cross-Sectional Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="causal-methods.html#difference-in-differences-did">2. Difference-in-Differences (DiD)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="causal-methods.html#synthetic-control">3. Synthetic Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="causal-methods.html#event-study-analysis">4. Event Study Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="causal-methods.html#callaway-santanna-method">5. Callaway-Sant’Anna Method</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="causal-methods.html#never-treated-comparison">Never-treated comparison:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="causal-methods.html#not-yet-treated-comparison">Not-yet-treated comparison:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="causal-methods.html#bacon-decomposition">6. BACON Decomposition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="causal-methods.html#double-debiased-machine-learning">7. Double/Debiased Machine Learning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="causal-methods.html#method-comparison">Method Comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="causal-methods.html#assumption-testing">Assumption Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="causal-methods.html#parallel-trends-tests">Parallel Trends Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="causal-methods.html#balance-tests">Balance Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="causal-methods.html#robustness-checks">Robustness Checks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="causal-methods.html#interpreting-results">Interpreting Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="causal-methods.html#treatment-effect-magnitudes">Treatment Effect Magnitudes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="causal-methods.html#dynamic-effects">Dynamic Effects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="causal-methods.html#heterogeneity-analysis">Heterogeneity Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="causal-methods.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="causal-methods.html#always-examine-diagnostics">1. Always Examine Diagnostics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="causal-methods.html#consider-multiple-specifications">2. Consider Multiple Specifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="causal-methods.html#domain-knowledge-integration">3. Domain Knowledge Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="causal-methods.html#communicate-uncertainty">4. Communicate Uncertainty</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Example Pipelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#example-1-california-proposition-99-synthetic-control">Example 1: California Proposition 99 (Synthetic Control)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#dataset">Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#what-the-pipeline-does">What the Pipeline Does</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#pipeline-execution-graph">Pipeline Execution Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#key-results">Key Results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#example-2-minimum-wage-study-staggered-did">Example 2: Minimum Wage Study (Staggered DiD)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#id1">Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#id2">What the Pipeline Does</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#id3">Pipeline Execution Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#id4">Key Results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#understanding-the-graph-visualization">Understanding the Graph Visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#node-types">Node Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#node-states">Node States</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#running-your-own-analysis">Running Your Own Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#module-pyautocausal.orchestration.graph">Orchestration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.__init__"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.configure_runtime"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.configure_runtime()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.input_nodes"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.input_nodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.get_ready_nodes"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.get_ready_nodes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.get_running_nodes"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.get_running_nodes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.is_execution_finished"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.is_execution_finished()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.get_incomplete_nodes"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.get_incomplete_nodes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.save_node_output"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.save_node_output()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.execute_graph"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.execute_graph()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.fit"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.get"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.get()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.create_node"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.create_node()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.add_node_to_graph"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.add_node_to_graph()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.add_node"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.add_node()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.create_input_node"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.create_input_node()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.merge_with"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.merge_with()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.to_text"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.to_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.print_graph"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.print_graph()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.get_node_predecessors"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.get_node_predecessors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.get_node_successors"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.get_node_successors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.get_node_predecessor_outputs"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.get_node_predecessor_outputs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.is_node_ready"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.is_node_ready()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.validate_node_graph_consistency"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.validate_node_graph_consistency()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.can_wire_nodes"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.can_wire_nodes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.add_node_with_predecessors"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.add_node_with_predecessors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.add_edge"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.add_edge()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.create_decision_node"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.create_decision_node()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.when_true"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.when_true()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.when_false"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.when_false()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.__getstate__"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.__getstate__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.__setstate__"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.__setstate__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.to_yaml"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.to_yaml()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.from_yaml"><code class="docutils literal notranslate"><span class="pre">ExecutableGraph.from_yaml()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.NodeExecutionError"><code class="docutils literal notranslate"><span class="pre">NodeExecutionError</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.NodeExecutionError.__init__"><code class="docutils literal notranslate"><span class="pre">NodeExecutionError.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.is_lambda"><code class="docutils literal notranslate"><span class="pre">is_lambda()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.BaseNode"><code class="docutils literal notranslate"><span class="pre">BaseNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.BaseNode.__init__"><code class="docutils literal notranslate"><span class="pre">BaseNode.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.Node"><code class="docutils literal notranslate"><span class="pre">Node</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.Node.__init__"><code class="docutils literal notranslate"><span class="pre">Node.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.Node.validate_action_function_static"><code class="docutils literal notranslate"><span class="pre">Node.validate_action_function_static()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.Node.__rshift__"><code class="docutils literal notranslate"><span class="pre">Node.__rshift__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.Node.execute"><code class="docutils literal notranslate"><span class="pre">Node.execute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.Node.mark_running"><code class="docutils literal notranslate"><span class="pre">Node.mark_running()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.Node.mark_completed"><code class="docutils literal notranslate"><span class="pre">Node.mark_completed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.Node.mark_failed"><code class="docutils literal notranslate"><span class="pre">Node.mark_failed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.Node.mark_passed"><code class="docutils literal notranslate"><span class="pre">Node.mark_passed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.Node.is_completed"><code class="docutils literal notranslate"><span class="pre">Node.is_completed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.Node.is_running"><code class="docutils literal notranslate"><span class="pre">Node.is_running()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.Node.is_passed"><code class="docutils literal notranslate"><span class="pre">Node.is_passed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.Node.get_result_value"><code class="docutils literal notranslate"><span class="pre">Node.get_result_value()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.DecisionNode"><code class="docutils literal notranslate"><span class="pre">DecisionNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.DecisionNode.__init__"><code class="docutils literal notranslate"><span class="pre">DecisionNode.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.DecisionNode.add_execute_when_true"><code class="docutils literal notranslate"><span class="pre">DecisionNode.add_execute_when_true()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.DecisionNode.add_execute_when_false"><code class="docutils literal notranslate"><span class="pre">DecisionNode.add_execute_when_false()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.DecisionNode.validate_branches"><code class="docutils literal notranslate"><span class="pre">DecisionNode.validate_branches()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.DecisionNode.condition_satisfied"><code class="docutils literal notranslate"><span class="pre">DecisionNode.condition_satisfied()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.DecisionNode.mark_unreachable_nodes_as_passed"><code class="docutils literal notranslate"><span class="pre">DecisionNode.mark_unreachable_nodes_as_passed()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.InputNode"><code class="docutils literal notranslate"><span class="pre">InputNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.InputNode.__init__"><code class="docutils literal notranslate"><span class="pre">InputNode.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.nodes.InputNode.set_input"><code class="docutils literal notranslate"><span class="pre">InputNode.set_input()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.base.Node"><code class="docutils literal notranslate"><span class="pre">Node</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.base.Node.name"><code class="docutils literal notranslate"><span class="pre">Node.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.base.Node.output"><code class="docutils literal notranslate"><span class="pre">Node.output</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.base.Node.output_config"><code class="docutils literal notranslate"><span class="pre">Node.output_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.base.Node.is_running"><code class="docutils literal notranslate"><span class="pre">Node.is_running()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.base.Node.is_completed"><code class="docutils literal notranslate"><span class="pre">Node.is_completed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.base.Node.execute"><code class="docutils literal notranslate"><span class="pre">Node.execute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.orchestration.base.Node.__init__"><code class="docutils literal notranslate"><span class="pre">Node.__init__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#module-pyautocausal.pipelines.library.specifications">Pipelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.BaseSpec"><code class="docutils literal notranslate"><span class="pre">BaseSpec</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.BaseSpec.data"><code class="docutils literal notranslate"><span class="pre">BaseSpec.data</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.BaseSpec.formula"><code class="docutils literal notranslate"><span class="pre">BaseSpec.formula</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.BaseSpec.__init__"><code class="docutils literal notranslate"><span class="pre">BaseSpec.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.CrossSectionalSpec"><code class="docutils literal notranslate"><span class="pre">CrossSectionalSpec</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.CrossSectionalSpec.outcome_col"><code class="docutils literal notranslate"><span class="pre">CrossSectionalSpec.outcome_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.CrossSectionalSpec.treatment_cols"><code class="docutils literal notranslate"><span class="pre">CrossSectionalSpec.treatment_cols</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.CrossSectionalSpec.control_cols"><code class="docutils literal notranslate"><span class="pre">CrossSectionalSpec.control_cols</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.CrossSectionalSpec.__init__"><code class="docutils literal notranslate"><span class="pre">CrossSectionalSpec.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec"><code class="docutils literal notranslate"><span class="pre">DiDSpec</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.outcome_col"><code class="docutils literal notranslate"><span class="pre">DiDSpec.outcome_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.treatment_cols"><code class="docutils literal notranslate"><span class="pre">DiDSpec.treatment_cols</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.control_cols"><code class="docutils literal notranslate"><span class="pre">DiDSpec.control_cols</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.time_col"><code class="docutils literal notranslate"><span class="pre">DiDSpec.time_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.unit_col"><code class="docutils literal notranslate"><span class="pre">DiDSpec.unit_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.post_col"><code class="docutils literal notranslate"><span class="pre">DiDSpec.post_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.include_unit_fe"><code class="docutils literal notranslate"><span class="pre">DiDSpec.include_unit_fe</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.include_time_fe"><code class="docutils literal notranslate"><span class="pre">DiDSpec.include_time_fe</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.model"><code class="docutils literal notranslate"><span class="pre">DiDSpec.model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.__init__"><code class="docutils literal notranslate"><span class="pre">DiDSpec.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec"><code class="docutils literal notranslate"><span class="pre">EventStudySpec</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.outcome_col"><code class="docutils literal notranslate"><span class="pre">EventStudySpec.outcome_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.treatment_cols"><code class="docutils literal notranslate"><span class="pre">EventStudySpec.treatment_cols</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.control_cols"><code class="docutils literal notranslate"><span class="pre">EventStudySpec.control_cols</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.time_col"><code class="docutils literal notranslate"><span class="pre">EventStudySpec.time_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.unit_col"><code class="docutils literal notranslate"><span class="pre">EventStudySpec.unit_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.relative_time_col"><code class="docutils literal notranslate"><span class="pre">EventStudySpec.relative_time_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.event_cols"><code class="docutils literal notranslate"><span class="pre">EventStudySpec.event_cols</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.reference_period"><code class="docutils literal notranslate"><span class="pre">EventStudySpec.reference_period</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.model"><code class="docutils literal notranslate"><span class="pre">EventStudySpec.model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.__init__"><code class="docutils literal notranslate"><span class="pre">EventStudySpec.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec"><code class="docutils literal notranslate"><span class="pre">StaggeredDiDSpec</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec.outcome_col"><code class="docutils literal notranslate"><span class="pre">StaggeredDiDSpec.outcome_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec.treatment_cols"><code class="docutils literal notranslate"><span class="pre">StaggeredDiDSpec.treatment_cols</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec.control_cols"><code class="docutils literal notranslate"><span class="pre">StaggeredDiDSpec.control_cols</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec.time_col"><code class="docutils literal notranslate"><span class="pre">StaggeredDiDSpec.time_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec.unit_col"><code class="docutils literal notranslate"><span class="pre">StaggeredDiDSpec.unit_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec.treatment_time_col"><code class="docutils literal notranslate"><span class="pre">StaggeredDiDSpec.treatment_time_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec.model"><code class="docutils literal notranslate"><span class="pre">StaggeredDiDSpec.model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec.__init__"><code class="docutils literal notranslate"><span class="pre">StaggeredDiDSpec.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec"><code class="docutils literal notranslate"><span class="pre">SynthDIDSpec</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.outcome_col"><code class="docutils literal notranslate"><span class="pre">SynthDIDSpec.outcome_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.treatment_cols"><code class="docutils literal notranslate"><span class="pre">SynthDIDSpec.treatment_cols</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.control_cols"><code class="docutils literal notranslate"><span class="pre">SynthDIDSpec.control_cols</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.time_col"><code class="docutils literal notranslate"><span class="pre">SynthDIDSpec.time_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.unit_col"><code class="docutils literal notranslate"><span class="pre">SynthDIDSpec.unit_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.Y"><code class="docutils literal notranslate"><span class="pre">SynthDIDSpec.Y</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.N0"><code class="docutils literal notranslate"><span class="pre">SynthDIDSpec.N0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.T0"><code class="docutils literal notranslate"><span class="pre">SynthDIDSpec.T0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.X"><code class="docutils literal notranslate"><span class="pre">SynthDIDSpec.X</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.model"><code class="docutils literal notranslate"><span class="pre">SynthDIDSpec.model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.__init__"><code class="docutils literal notranslate"><span class="pre">SynthDIDSpec.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec"><code class="docutils literal notranslate"><span class="pre">UpliftSpec</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.outcome_col"><code class="docutils literal notranslate"><span class="pre">UpliftSpec.outcome_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.treatment_cols"><code class="docutils literal notranslate"><span class="pre">UpliftSpec.treatment_cols</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.control_cols"><code class="docutils literal notranslate"><span class="pre">UpliftSpec.control_cols</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.unit_col"><code class="docutils literal notranslate"><span class="pre">UpliftSpec.unit_col</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.model"><code class="docutils literal notranslate"><span class="pre">UpliftSpec.model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.propensity_score"><code class="docutils literal notranslate"><span class="pre">UpliftSpec.propensity_score</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.cate_estimates"><code class="docutils literal notranslate"><span class="pre">UpliftSpec.cate_estimates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.ate_estimate"><code class="docutils literal notranslate"><span class="pre">UpliftSpec.ate_estimate</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.ate_ci"><code class="docutils literal notranslate"><span class="pre">UpliftSpec.ate_ci</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.model_type"><code class="docutils literal notranslate"><span class="pre">UpliftSpec.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.models"><code class="docutils literal notranslate"><span class="pre">UpliftSpec.models</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.evaluation_metrics"><code class="docutils literal notranslate"><span class="pre">UpliftSpec.evaluation_metrics</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.__init__"><code class="docutils literal notranslate"><span class="pre">UpliftSpec.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.validate_and_prepare_data"><code class="docutils literal notranslate"><span class="pre">validate_and_prepare_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.specifications.spec_constructor"><code class="docutils literal notranslate"><span class="pre">spec_constructor()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.estimators.create_model_matrices"><code class="docutils literal notranslate"><span class="pre">create_model_matrices()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.estimators.extract_treatment_from_design"><code class="docutils literal notranslate"><span class="pre">extract_treatment_from_design()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.conditions.is_continuous"><code class="docutils literal notranslate"><span class="pre">is_continuous()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.conditions.index_relative_time"><code class="docutils literal notranslate"><span class="pre">index_relative_time()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.conditions.has_binary_treatment_and_outcome"><code class="docutils literal notranslate"><span class="pre">has_binary_treatment_and_outcome()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.pipelines.library.plots.create_did_plot"><code class="docutils literal notranslate"><span class="pre">create_did_plot()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#causal-methods">Causal Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#module-pyautocausal.persistence.output_config">Persistence</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.persistence.output_config.OutputConfig"><code class="docutils literal notranslate"><span class="pre">OutputConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.output_config.OutputConfig.output_type"><code class="docutils literal notranslate"><span class="pre">OutputConfig.output_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.output_config.OutputConfig.output_filename"><code class="docutils literal notranslate"><span class="pre">OutputConfig.output_filename</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.output_config.OutputConfig.__post_init__"><code class="docutils literal notranslate"><span class="pre">OutputConfig.__post_init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.output_config.OutputConfig.__init__"><code class="docutils literal notranslate"><span class="pre">OutputConfig.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.persistence.output_handler.UnsupportedOutputTypeError"><code class="docutils literal notranslate"><span class="pre">UnsupportedOutputTypeError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler"><code class="docutils literal notranslate"><span class="pre">OutputHandler</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.SAVE_METHOD_MAP"><code class="docutils literal notranslate"><span class="pre">OutputHandler.SAVE_METHOD_MAP</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.__init__"><code class="docutils literal notranslate"><span class="pre">OutputHandler.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.save"><code class="docutils literal notranslate"><span class="pre">OutputHandler.save()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.save_csv"><code class="docutils literal notranslate"><span class="pre">OutputHandler.save_csv()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.save_parquet"><code class="docutils literal notranslate"><span class="pre">OutputHandler.save_parquet()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.save_json"><code class="docutils literal notranslate"><span class="pre">OutputHandler.save_json()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.save_pickle"><code class="docutils literal notranslate"><span class="pre">OutputHandler.save_pickle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.save_text"><code class="docutils literal notranslate"><span class="pre">OutputHandler.save_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.save_png"><code class="docutils literal notranslate"><span class="pre">OutputHandler.save_png()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.save_bytes"><code class="docutils literal notranslate"><span class="pre">OutputHandler.save_bytes()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.persistence.notebook_export.NotebookExporter"><code class="docutils literal notranslate"><span class="pre">NotebookExporter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.notebook_export.NotebookExporter.__init__"><code class="docutils literal notranslate"><span class="pre">NotebookExporter.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.notebook_export.NotebookExporter.export_notebook"><code class="docutils literal notranslate"><span class="pre">NotebookExporter.export_notebook()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.notebook_export.NotebookExporter.export_and_run_to_html"><code class="docutils literal notranslate"><span class="pre">NotebookExporter.export_and_run_to_html()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.persistence.notebook_export.NotebookExporter.run_existing_notebook_to_html"><code class="docutils literal notranslate"><span class="pre">NotebookExporter.run_existing_notebook_to_html()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#module-pyautocausal.data_validation.validator_base">Data Validation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.DataValidationError"><code class="docutils literal notranslate"><span class="pre">DataValidationError</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.DataValidationError.__init__"><code class="docutils literal notranslate"><span class="pre">DataValidationError.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.DataValidationError.__str__"><code class="docutils literal notranslate"><span class="pre">DataValidationError.__str__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult"><code class="docutils literal notranslate"><span class="pre">AggregatedValidationResult</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult.passed"><code class="docutils literal notranslate"><span class="pre">AggregatedValidationResult.passed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult.individual_results"><code class="docutils literal notranslate"><span class="pre">AggregatedValidationResult.individual_results</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult.summary"><code class="docutils literal notranslate"><span class="pre">AggregatedValidationResult.summary</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#id0"><code class="docutils literal notranslate"><span class="pre">AggregatedValidationResult.passed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#id1"><code class="docutils literal notranslate"><span class="pre">AggregatedValidationResult.individual_results</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#id2"><code class="docutils literal notranslate"><span class="pre">AggregatedValidationResult.summary</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult.__post_init__"><code class="docutils literal notranslate"><span class="pre">AggregatedValidationResult.__post_init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult.get_all_issues"><code class="docutils literal notranslate"><span class="pre">AggregatedValidationResult.get_all_issues()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult.get_failed_checks"><code class="docutils literal notranslate"><span class="pre">AggregatedValidationResult.get_failed_checks()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult.to_string"><code class="docutils literal notranslate"><span class="pre">AggregatedValidationResult.to_string()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult.__init__"><code class="docutils literal notranslate"><span class="pre">AggregatedValidationResult.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.DataValidatorConfig"><code class="docutils literal notranslate"><span class="pre">DataValidatorConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.DataValidatorConfig.fail_on_warning"><code class="docutils literal notranslate"><span class="pre">DataValidatorConfig.fail_on_warning</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.DataValidatorConfig.aggregation_strategy"><code class="docutils literal notranslate"><span class="pre">DataValidatorConfig.aggregation_strategy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.DataValidatorConfig.check_configs"><code class="docutils literal notranslate"><span class="pre">DataValidatorConfig.check_configs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.DataValidatorConfig.enabled_checks"><code class="docutils literal notranslate"><span class="pre">DataValidatorConfig.enabled_checks</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.DataValidatorConfig.__init__"><code class="docutils literal notranslate"><span class="pre">DataValidatorConfig.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.DataValidator"><code class="docutils literal notranslate"><span class="pre">DataValidator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.DataValidator.__init__"><code class="docutils literal notranslate"><span class="pre">DataValidator.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.DataValidator.validate"><code class="docutils literal notranslate"><span class="pre">DataValidator.validate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.validator_base.DataValidator.__call__"><code class="docutils literal notranslate"><span class="pre">DataValidator.__call__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NonEmptyDataConfig"><code class="docutils literal notranslate"><span class="pre">NonEmptyDataConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NonEmptyDataConfig.min_rows"><code class="docutils literal notranslate"><span class="pre">NonEmptyDataConfig.min_rows</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NonEmptyDataConfig.min_columns"><code class="docutils literal notranslate"><span class="pre">NonEmptyDataConfig.min_columns</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NonEmptyDataConfig.__init__"><code class="docutils literal notranslate"><span class="pre">NonEmptyDataConfig.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NonEmptyDataCheck"><code class="docutils literal notranslate"><span class="pre">NonEmptyDataCheck</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NonEmptyDataCheck.name"><code class="docutils literal notranslate"><span class="pre">NonEmptyDataCheck.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NonEmptyDataCheck.get_default_config"><code class="docutils literal notranslate"><span class="pre">NonEmptyDataCheck.get_default_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NonEmptyDataCheck.validate"><code class="docutils literal notranslate"><span class="pre">NonEmptyDataCheck.validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.RequiredColumnsConfig"><code class="docutils literal notranslate"><span class="pre">RequiredColumnsConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.RequiredColumnsConfig.required_columns"><code class="docutils literal notranslate"><span class="pre">RequiredColumnsConfig.required_columns</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.RequiredColumnsConfig.case_sensitive"><code class="docutils literal notranslate"><span class="pre">RequiredColumnsConfig.case_sensitive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.RequiredColumnsConfig.__init__"><code class="docutils literal notranslate"><span class="pre">RequiredColumnsConfig.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.RequiredColumnsCheck"><code class="docutils literal notranslate"><span class="pre">RequiredColumnsCheck</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.RequiredColumnsCheck.name"><code class="docutils literal notranslate"><span class="pre">RequiredColumnsCheck.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.RequiredColumnsCheck.get_default_config"><code class="docutils literal notranslate"><span class="pre">RequiredColumnsCheck.get_default_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.RequiredColumnsCheck.validate"><code class="docutils literal notranslate"><span class="pre">RequiredColumnsCheck.validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.ColumnTypesConfig"><code class="docutils literal notranslate"><span class="pre">ColumnTypesConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.ColumnTypesConfig.expected_types"><code class="docutils literal notranslate"><span class="pre">ColumnTypesConfig.expected_types</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.ColumnTypesConfig.type_checkers"><code class="docutils literal notranslate"><span class="pre">ColumnTypesConfig.type_checkers</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.ColumnTypesConfig.__init__"><code class="docutils literal notranslate"><span class="pre">ColumnTypesConfig.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.ColumnTypesCheck"><code class="docutils literal notranslate"><span class="pre">ColumnTypesCheck</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.ColumnTypesCheck.name"><code class="docutils literal notranslate"><span class="pre">ColumnTypesCheck.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.ColumnTypesCheck.get_default_config"><code class="docutils literal notranslate"><span class="pre">ColumnTypesCheck.get_default_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.ColumnTypesCheck.validate"><code class="docutils literal notranslate"><span class="pre">ColumnTypesCheck.validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsConfig"><code class="docutils literal notranslate"><span class="pre">NoDuplicateColumnsConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsConfig.case_sensitive"><code class="docutils literal notranslate"><span class="pre">NoDuplicateColumnsConfig.case_sensitive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsConfig.__init__"><code class="docutils literal notranslate"><span class="pre">NoDuplicateColumnsConfig.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsCheck"><code class="docutils literal notranslate"><span class="pre">NoDuplicateColumnsCheck</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsCheck.name"><code class="docutils literal notranslate"><span class="pre">NoDuplicateColumnsCheck.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsCheck.get_default_config"><code class="docutils literal notranslate"><span class="pre">NoDuplicateColumnsCheck.get_default_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsCheck.validate"><code class="docutils literal notranslate"><span class="pre">NoDuplicateColumnsCheck.validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsConfig"><code class="docutils literal notranslate"><span class="pre">DuplicateRowsConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsConfig.subset"><code class="docutils literal notranslate"><span class="pre">DuplicateRowsConfig.subset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsConfig.keep"><code class="docutils literal notranslate"><span class="pre">DuplicateRowsConfig.keep</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsConfig.max_duplicate_fraction"><code class="docutils literal notranslate"><span class="pre">DuplicateRowsConfig.max_duplicate_fraction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsConfig.__init__"><code class="docutils literal notranslate"><span class="pre">DuplicateRowsConfig.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsCheck"><code class="docutils literal notranslate"><span class="pre">DuplicateRowsCheck</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsCheck.name"><code class="docutils literal notranslate"><span class="pre">DuplicateRowsCheck.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsCheck.get_default_config"><code class="docutils literal notranslate"><span class="pre">DuplicateRowsCheck.get_default_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsCheck.validate"><code class="docutils literal notranslate"><span class="pre">DuplicateRowsCheck.validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentConfig"><code class="docutils literal notranslate"><span class="pre">BinaryTreatmentConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentConfig.treatment_column"><code class="docutils literal notranslate"><span class="pre">BinaryTreatmentConfig.treatment_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentConfig.allow_missing"><code class="docutils literal notranslate"><span class="pre">BinaryTreatmentConfig.allow_missing</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentConfig.valid_values"><code class="docutils literal notranslate"><span class="pre">BinaryTreatmentConfig.valid_values</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentConfig.__init__"><code class="docutils literal notranslate"><span class="pre">BinaryTreatmentConfig.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentCheck"><code class="docutils literal notranslate"><span class="pre">BinaryTreatmentCheck</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentCheck.name"><code class="docutils literal notranslate"><span class="pre">BinaryTreatmentCheck.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentCheck.get_default_config"><code class="docutils literal notranslate"><span class="pre">BinaryTreatmentCheck.get_default_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentCheck.validate"><code class="docutils literal notranslate"><span class="pre">BinaryTreatmentCheck.validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig"><code class="docutils literal notranslate"><span class="pre">TreatmentVariationConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig.treatment_column"><code class="docutils literal notranslate"><span class="pre">TreatmentVariationConfig.treatment_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig.min_treated_fraction"><code class="docutils literal notranslate"><span class="pre">TreatmentVariationConfig.min_treated_fraction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig.max_treated_fraction"><code class="docutils literal notranslate"><span class="pre">TreatmentVariationConfig.max_treated_fraction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig.min_treated_count"><code class="docutils literal notranslate"><span class="pre">TreatmentVariationConfig.min_treated_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig.min_control_count"><code class="docutils literal notranslate"><span class="pre">TreatmentVariationConfig.min_control_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig.__init__"><code class="docutils literal notranslate"><span class="pre">TreatmentVariationConfig.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationCheck"><code class="docutils literal notranslate"><span class="pre">TreatmentVariationCheck</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationCheck.name"><code class="docutils literal notranslate"><span class="pre">TreatmentVariationCheck.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationCheck.get_default_config"><code class="docutils literal notranslate"><span class="pre">TreatmentVariationCheck.get_default_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationCheck.validate"><code class="docutils literal notranslate"><span class="pre">TreatmentVariationCheck.validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureConfig"><code class="docutils literal notranslate"><span class="pre">PanelStructureConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureConfig.unit_column"><code class="docutils literal notranslate"><span class="pre">PanelStructureConfig.unit_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureConfig.time_column"><code class="docutils literal notranslate"><span class="pre">PanelStructureConfig.time_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureConfig.treatment_column"><code class="docutils literal notranslate"><span class="pre">PanelStructureConfig.treatment_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureConfig.require_balanced"><code class="docutils literal notranslate"><span class="pre">PanelStructureConfig.require_balanced</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureConfig.__init__"><code class="docutils literal notranslate"><span class="pre">PanelStructureConfig.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureCheck"><code class="docutils literal notranslate"><span class="pre">PanelStructureCheck</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureCheck.name"><code class="docutils literal notranslate"><span class="pre">PanelStructureCheck.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureCheck.get_default_config"><code class="docutils literal notranslate"><span class="pre">PanelStructureCheck.get_default_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureCheck.validate"><code class="docutils literal notranslate"><span class="pre">PanelStructureCheck.validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnConfig"><code class="docutils literal notranslate"><span class="pre">TimeColumnConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnConfig.time_column"><code class="docutils literal notranslate"><span class="pre">TimeColumnConfig.time_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnConfig.require_sequential"><code class="docutils literal notranslate"><span class="pre">TimeColumnConfig.require_sequential</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnConfig.require_numeric"><code class="docutils literal notranslate"><span class="pre">TimeColumnConfig.require_numeric</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnConfig.date_format"><code class="docutils literal notranslate"><span class="pre">TimeColumnConfig.date_format</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnConfig.__init__"><code class="docutils literal notranslate"><span class="pre">TimeColumnConfig.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnCheck"><code class="docutils literal notranslate"><span class="pre">TimeColumnCheck</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnCheck.name"><code class="docutils literal notranslate"><span class="pre">TimeColumnCheck.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnCheck.get_default_config"><code class="docutils literal notranslate"><span class="pre">TimeColumnCheck.get_default_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnCheck.validate"><code class="docutils literal notranslate"><span class="pre">TimeColumnCheck.validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceConfig"><code class="docutils literal notranslate"><span class="pre">TreatmentPersistenceConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceConfig.treatment_column"><code class="docutils literal notranslate"><span class="pre">TreatmentPersistenceConfig.treatment_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceConfig.unit_column"><code class="docutils literal notranslate"><span class="pre">TreatmentPersistenceConfig.unit_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceConfig.time_column"><code class="docutils literal notranslate"><span class="pre">TreatmentPersistenceConfig.time_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceConfig.allow_treatment_reversals"><code class="docutils literal notranslate"><span class="pre">TreatmentPersistenceConfig.allow_treatment_reversals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceConfig.__init__"><code class="docutils literal notranslate"><span class="pre">TreatmentPersistenceConfig.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceCheck"><code class="docutils literal notranslate"><span class="pre">TreatmentPersistenceCheck</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceCheck.name"><code class="docutils literal notranslate"><span class="pre">TreatmentPersistenceCheck.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceCheck.get_default_config"><code class="docutils literal notranslate"><span class="pre">TreatmentPersistenceCheck.get_default_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceCheck.validate"><code class="docutils literal notranslate"><span class="pre">TreatmentPersistenceCheck.validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableConfig"><code class="docutils literal notranslate"><span class="pre">OutcomeVariableConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableConfig.outcome_column"><code class="docutils literal notranslate"><span class="pre">OutcomeVariableConfig.outcome_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableConfig.min_variation_threshold"><code class="docutils literal notranslate"><span class="pre">OutcomeVariableConfig.min_variation_threshold</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableConfig.outlier_threshold"><code class="docutils literal notranslate"><span class="pre">OutcomeVariableConfig.outlier_threshold</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableConfig.require_numeric"><code class="docutils literal notranslate"><span class="pre">OutcomeVariableConfig.require_numeric</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableConfig.__init__"><code class="docutils literal notranslate"><span class="pre">OutcomeVariableConfig.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableCheck"><code class="docutils literal notranslate"><span class="pre">OutcomeVariableCheck</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableCheck.name"><code class="docutils literal notranslate"><span class="pre">OutcomeVariableCheck.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableCheck.get_default_config"><code class="docutils literal notranslate"><span class="pre">OutcomeVariableCheck.get_default_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableCheck.validate"><code class="docutils literal notranslate"><span class="pre">OutcomeVariableCheck.validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig"><code class="docutils literal notranslate"><span class="pre">CausalMethodRequirementsConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig.treatment_column"><code class="docutils literal notranslate"><span class="pre">CausalMethodRequirementsConfig.treatment_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig.unit_column"><code class="docutils literal notranslate"><span class="pre">CausalMethodRequirementsConfig.unit_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig.time_column"><code class="docutils literal notranslate"><span class="pre">CausalMethodRequirementsConfig.time_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig.min_pre_periods"><code class="docutils literal notranslate"><span class="pre">CausalMethodRequirementsConfig.min_pre_periods</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig.min_post_periods"><code class="docutils literal notranslate"><span class="pre">CausalMethodRequirementsConfig.min_post_periods</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig.min_control_units"><code class="docutils literal notranslate"><span class="pre">CausalMethodRequirementsConfig.min_control_units</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig.min_never_treated_fraction"><code class="docutils literal notranslate"><span class="pre">CausalMethodRequirementsConfig.min_never_treated_fraction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig.__init__"><code class="docutils literal notranslate"><span class="pre">CausalMethodRequirementsConfig.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsCheck"><code class="docutils literal notranslate"><span class="pre">CausalMethodRequirementsCheck</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsCheck.name"><code class="docutils literal notranslate"><span class="pre">CausalMethodRequirementsCheck.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsCheck.get_default_config"><code class="docutils literal notranslate"><span class="pre">CausalMethodRequirementsCheck.get_default_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsCheck.validate"><code class="docutils literal notranslate"><span class="pre">CausalMethodRequirementsCheck.validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsConfig"><code class="docutils literal notranslate"><span class="pre">TreatmentTimingPatternsConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsConfig.treatment_column"><code class="docutils literal notranslate"><span class="pre">TreatmentTimingPatternsConfig.treatment_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsConfig.unit_column"><code class="docutils literal notranslate"><span class="pre">TreatmentTimingPatternsConfig.unit_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsConfig.time_column"><code class="docutils literal notranslate"><span class="pre">TreatmentTimingPatternsConfig.time_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsConfig.check_simultaneous_adoption"><code class="docutils literal notranslate"><span class="pre">TreatmentTimingPatternsConfig.check_simultaneous_adoption</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsConfig.__init__"><code class="docutils literal notranslate"><span class="pre">TreatmentTimingPatternsConfig.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsCheck"><code class="docutils literal notranslate"><span class="pre">TreatmentTimingPatternsCheck</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsCheck.name"><code class="docutils literal notranslate"><span class="pre">TreatmentTimingPatternsCheck.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsCheck.get_default_config"><code class="docutils literal notranslate"><span class="pre">TreatmentTimingPatternsCheck.get_default_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsCheck.validate"><code class="docutils literal notranslate"><span class="pre">TreatmentTimingPatternsCheck.validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationConfig"><code class="docutils literal notranslate"><span class="pre">TimePeriodStandardizationConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationConfig.treatment_column"><code class="docutils literal notranslate"><span class="pre">TimePeriodStandardizationConfig.treatment_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationConfig.time_column"><code class="docutils literal notranslate"><span class="pre">TimePeriodStandardizationConfig.time_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationConfig.__init__"><code class="docutils literal notranslate"><span class="pre">TimePeriodStandardizationConfig.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationCheck"><code class="docutils literal notranslate"><span class="pre">TimePeriodStandardizationCheck</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationCheck.name"><code class="docutils literal notranslate"><span class="pre">TimePeriodStandardizationCheck.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationCheck.get_default_config"><code class="docutils literal notranslate"><span class="pre">TimePeriodStandardizationCheck.get_default_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationCheck.validate"><code class="docutils literal notranslate"><span class="pre">TimePeriodStandardizationCheck.validate()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#module-pyautocausal.data_cleaning.cleaner">Data Cleaning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_cleaning.cleaner.DataCleaner"><code class="docutils literal notranslate"><span class="pre">DataCleaner</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_cleaning.cleaner.DataCleaner.__init__"><code class="docutils literal notranslate"><span class="pre">DataCleaner.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_cleaning.cleaner.DataCleaner.clean"><code class="docutils literal notranslate"><span class="pre">DataCleaner.clean()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_cleaning.cleaner.DataCleaner.__call__"><code class="docutils literal notranslate"><span class="pre">DataCleaner.__call__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#pyautocausal.data_cleaning.planner.DataCleaningPlanner"><code class="docutils literal notranslate"><span class="pre">DataCleaningPlanner</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_cleaning.planner.DataCleaningPlanner.__init__"><code class="docutils literal notranslate"><span class="pre">DataCleaningPlanner.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_cleaning.planner.DataCleaningPlanner.create_plan"><code class="docutils literal notranslate"><span class="pre">DataCleaningPlanner.create_plan()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html#pyautocausal.data_cleaning.planner.DataCleaningPlanner.__call__"><code class="docutils literal notranslate"><span class="pre">DataCleaningPlanner.__call__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PyAutoCausal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Index</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#_"><strong>_</strong></a>
+ | <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#K"><strong>K</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ | <a href="#X"><strong>X</strong></a>
+ | <a href="#Y"><strong>Y</strong></a>
+ 
+</div>
+<h2 id="_">_</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.data_cleaning.cleaner.DataCleaner.__call__">__call__() (pyautocausal.data_cleaning.cleaner.DataCleaner method)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.data_cleaning.planner.DataCleaningPlanner.__call__">(pyautocausal.data_cleaning.planner.DataCleaningPlanner method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.validator_base.DataValidator.__call__">(pyautocausal.data_validation.validator_base.DataValidator method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.__getstate__">__getstate__() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_cleaning.cleaner.DataCleaner.__init__">__init__() (pyautocausal.data_cleaning.cleaner.DataCleaner method)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.data_cleaning.planner.DataCleaningPlanner.__init__">(pyautocausal.data_cleaning.planner.DataCleaningPlanner method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.ColumnTypesConfig.__init__">(pyautocausal.data_validation.checks.basic_checks.ColumnTypesConfig method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsConfig.__init__">(pyautocausal.data_validation.checks.basic_checks.DuplicateRowsConfig method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsConfig.__init__">(pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsConfig method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NonEmptyDataConfig.__init__">(pyautocausal.data_validation.checks.basic_checks.NonEmptyDataConfig method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.RequiredColumnsConfig.__init__">(pyautocausal.data_validation.checks.basic_checks.RequiredColumnsConfig method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentConfig.__init__">(pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentConfig method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig.__init__">(pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableConfig.__init__">(pyautocausal.data_validation.checks.causal_checks.OutcomeVariableConfig method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureConfig.__init__">(pyautocausal.data_validation.checks.causal_checks.PanelStructureConfig method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnConfig.__init__">(pyautocausal.data_validation.checks.causal_checks.TimeColumnConfig method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationConfig.__init__">(pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationConfig method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceConfig.__init__">(pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceConfig method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsConfig.__init__">(pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsConfig method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig.__init__">(pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult.__init__">(pyautocausal.data_validation.validator_base.AggregatedValidationResult method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.validator_base.DataValidationError.__init__">(pyautocausal.data_validation.validator_base.DataValidationError method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.validator_base.DataValidator.__init__">(pyautocausal.data_validation.validator_base.DataValidator method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.validator_base.DataValidatorConfig.__init__">(pyautocausal.data_validation.validator_base.DataValidatorConfig method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.orchestration.base.Node.__init__">(pyautocausal.orchestration.base.Node method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.__init__">(pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.orchestration.nodes.BaseNode.__init__">(pyautocausal.orchestration.nodes.BaseNode method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.orchestration.nodes.DecisionNode.__init__">(pyautocausal.orchestration.nodes.DecisionNode method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.orchestration.nodes.InputNode.__init__">(pyautocausal.orchestration.nodes.InputNode method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.orchestration.nodes.Node.__init__">(pyautocausal.orchestration.nodes.Node method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.orchestration.nodes.NodeExecutionError.__init__">(pyautocausal.orchestration.nodes.NodeExecutionError method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.persistence.notebook_export.NotebookExporter.__init__">(pyautocausal.persistence.notebook_export.NotebookExporter method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.persistence.output_config.OutputConfig.__init__">(pyautocausal.persistence.output_config.OutputConfig method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.__init__">(pyautocausal.persistence.output_handler.OutputHandler method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.BaseSpec.__init__">(pyautocausal.pipelines.library.specifications.BaseSpec method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.CrossSectionalSpec.__init__">(pyautocausal.pipelines.library.specifications.CrossSectionalSpec method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.__init__">(pyautocausal.pipelines.library.specifications.DiDSpec method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.__init__">(pyautocausal.pipelines.library.specifications.EventStudySpec method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec.__init__">(pyautocausal.pipelines.library.specifications.StaggeredDiDSpec method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.__init__">(pyautocausal.pipelines.library.specifications.SynthDIDSpec method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.__init__">(pyautocausal.pipelines.library.specifications.UpliftSpec method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult.__post_init__">__post_init__() (pyautocausal.data_validation.validator_base.AggregatedValidationResult method)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.persistence.output_config.OutputConfig.__post_init__">(pyautocausal.persistence.output_config.OutputConfig method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.Node.__rshift__">__rshift__() (pyautocausal.orchestration.nodes.Node method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.__setstate__">__setstate__() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.validator_base.DataValidationError.__str__">__str__() (pyautocausal.data_validation.validator_base.DataValidationError method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.add_edge">add_edge() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.DecisionNode.add_execute_when_false">add_execute_when_false() (pyautocausal.orchestration.nodes.DecisionNode method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.DecisionNode.add_execute_when_true">add_execute_when_true() (pyautocausal.orchestration.nodes.DecisionNode method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.add_node">add_node() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.add_node_to_graph">add_node_to_graph() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.add_node_with_predecessors">add_node_with_predecessors() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult">AggregatedValidationResult (class in pyautocausal.data_validation.validator_base)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.validator_base.DataValidatorConfig.aggregation_strategy">aggregation_strategy (pyautocausal.data_validation.validator_base.DataValidatorConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentConfig.allow_missing">allow_missing (pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceConfig.allow_treatment_reversals">allow_treatment_reversals (pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.ate_ci">ate_ci (pyautocausal.pipelines.library.specifications.UpliftSpec attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.ate_estimate">ate_estimate (pyautocausal.pipelines.library.specifications.UpliftSpec attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.BaseNode">BaseNode (class in pyautocausal.orchestration.nodes)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.BaseSpec">BaseSpec (class in pyautocausal.pipelines.library.specifications)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentCheck">BinaryTreatmentCheck (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentConfig">BinaryTreatmentConfig (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.can_wire_nodes">can_wire_nodes() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsConfig.case_sensitive">case_sensitive (pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsConfig attribute)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.RequiredColumnsConfig.case_sensitive">(pyautocausal.data_validation.checks.basic_checks.RequiredColumnsConfig attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.cate_estimates">cate_estimates (pyautocausal.pipelines.library.specifications.UpliftSpec attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsCheck">CausalMethodRequirementsCheck (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig">CausalMethodRequirementsConfig (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.validator_base.DataValidatorConfig.check_configs">check_configs (pyautocausal.data_validation.validator_base.DataValidatorConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsConfig.check_simultaneous_adoption">check_simultaneous_adoption (pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_cleaning.cleaner.DataCleaner.clean">clean() (pyautocausal.data_cleaning.cleaner.DataCleaner method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.ColumnTypesCheck">ColumnTypesCheck (class in pyautocausal.data_validation.checks.basic_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.ColumnTypesConfig">ColumnTypesConfig (class in pyautocausal.data_validation.checks.basic_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.DecisionNode.condition_satisfied">condition_satisfied() (pyautocausal.orchestration.nodes.DecisionNode method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.configure_runtime">configure_runtime() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.CrossSectionalSpec.control_cols">control_cols (pyautocausal.pipelines.library.specifications.CrossSectionalSpec attribute)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.control_cols">(pyautocausal.pipelines.library.specifications.DiDSpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.control_cols">(pyautocausal.pipelines.library.specifications.EventStudySpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec.control_cols">(pyautocausal.pipelines.library.specifications.StaggeredDiDSpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.control_cols">(pyautocausal.pipelines.library.specifications.SynthDIDSpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.control_cols">(pyautocausal.pipelines.library.specifications.UpliftSpec attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.create_decision_node">create_decision_node() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.plots.create_did_plot">create_did_plot() (in module pyautocausal.pipelines.library.plots)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.create_input_node">create_input_node() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.estimators.create_model_matrices">create_model_matrices() (in module pyautocausal.pipelines.library.estimators)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.create_node">create_node() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_cleaning.planner.DataCleaningPlanner.create_plan">create_plan() (pyautocausal.data_cleaning.planner.DataCleaningPlanner method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.CrossSectionalSpec">CrossSectionalSpec (class in pyautocausal.pipelines.library.specifications)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.BaseSpec.data">data (pyautocausal.pipelines.library.specifications.BaseSpec attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_cleaning.cleaner.DataCleaner">DataCleaner (class in pyautocausal.data_cleaning.cleaner)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_cleaning.planner.DataCleaningPlanner">DataCleaningPlanner (class in pyautocausal.data_cleaning.planner)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.validator_base.DataValidationError">DataValidationError</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.validator_base.DataValidator">DataValidator (class in pyautocausal.data_validation.validator_base)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.data_validation.validator_base.DataValidatorConfig">DataValidatorConfig (class in pyautocausal.data_validation.validator_base)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnConfig.date_format">date_format (pyautocausal.data_validation.checks.causal_checks.TimeColumnConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.DecisionNode">DecisionNode (class in pyautocausal.orchestration.nodes)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec">DiDSpec (class in pyautocausal.pipelines.library.specifications)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsCheck">DuplicateRowsCheck (class in pyautocausal.data_validation.checks.basic_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsConfig">DuplicateRowsConfig (class in pyautocausal.data_validation.checks.basic_checks)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.data_validation.validator_base.DataValidatorConfig.enabled_checks">enabled_checks (pyautocausal.data_validation.validator_base.DataValidatorConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.evaluation_metrics">evaluation_metrics (pyautocausal.pipelines.library.specifications.UpliftSpec attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.event_cols">event_cols (pyautocausal.pipelines.library.specifications.EventStudySpec attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec">EventStudySpec (class in pyautocausal.pipelines.library.specifications)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph">ExecutableGraph (class in pyautocausal.orchestration.graph)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.base.Node.execute">execute() (pyautocausal.orchestration.base.Node method)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.orchestration.nodes.Node.execute">(pyautocausal.orchestration.nodes.Node method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.execute_graph">execute_graph() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.ColumnTypesConfig.expected_types">expected_types (pyautocausal.data_validation.checks.basic_checks.ColumnTypesConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.persistence.notebook_export.NotebookExporter.export_and_run_to_html">export_and_run_to_html() (pyautocausal.persistence.notebook_export.NotebookExporter method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.persistence.notebook_export.NotebookExporter.export_notebook">export_notebook() (pyautocausal.persistence.notebook_export.NotebookExporter method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.estimators.extract_treatment_from_design">extract_treatment_from_design() (in module pyautocausal.pipelines.library.estimators)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.data_validation.validator_base.DataValidatorConfig.fail_on_warning">fail_on_warning (pyautocausal.data_validation.validator_base.DataValidatorConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.fit">fit() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.BaseSpec.formula">formula (pyautocausal.pipelines.library.specifications.BaseSpec attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.from_yaml">from_yaml() (pyautocausal.orchestration.graph.ExecutableGraph class method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.get">get() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult.get_all_issues">get_all_issues() (pyautocausal.data_validation.validator_base.AggregatedValidationResult method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.ColumnTypesCheck.get_default_config">get_default_config() (pyautocausal.data_validation.checks.basic_checks.ColumnTypesCheck class method)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsCheck.get_default_config">(pyautocausal.data_validation.checks.basic_checks.DuplicateRowsCheck class method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsCheck.get_default_config">(pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsCheck class method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NonEmptyDataCheck.get_default_config">(pyautocausal.data_validation.checks.basic_checks.NonEmptyDataCheck class method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.RequiredColumnsCheck.get_default_config">(pyautocausal.data_validation.checks.basic_checks.RequiredColumnsCheck class method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentCheck.get_default_config">(pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentCheck class method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsCheck.get_default_config">(pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsCheck class method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableCheck.get_default_config">(pyautocausal.data_validation.checks.causal_checks.OutcomeVariableCheck class method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureCheck.get_default_config">(pyautocausal.data_validation.checks.causal_checks.PanelStructureCheck class method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnCheck.get_default_config">(pyautocausal.data_validation.checks.causal_checks.TimeColumnCheck class method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationCheck.get_default_config">(pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationCheck class method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceCheck.get_default_config">(pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceCheck class method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsCheck.get_default_config">(pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsCheck class method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationCheck.get_default_config">(pyautocausal.data_validation.checks.causal_checks.TreatmentVariationCheck class method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult.get_failed_checks">get_failed_checks() (pyautocausal.data_validation.validator_base.AggregatedValidationResult method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.get_incomplete_nodes">get_incomplete_nodes() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.get_node_predecessor_outputs">get_node_predecessor_outputs() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.get_node_predecessors">get_node_predecessors() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.get_node_successors">get_node_successors() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.get_ready_nodes">get_ready_nodes() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.Node.get_result_value">get_result_value() (pyautocausal.orchestration.nodes.Node method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.get_running_nodes">get_running_nodes() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.conditions.has_binary_treatment_and_outcome">has_binary_treatment_and_outcome() (in module pyautocausal.pipelines.library.conditions)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.include_time_fe">include_time_fe (pyautocausal.pipelines.library.specifications.DiDSpec attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.include_unit_fe">include_unit_fe (pyautocausal.pipelines.library.specifications.DiDSpec attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.conditions.index_relative_time">index_relative_time() (in module pyautocausal.pipelines.library.conditions)</a>
+</li>
+      <li><a href="api/index.html#id1">individual_results (pyautocausal.data_validation.validator_base.AggregatedValidationResult attribute)</a>, <a href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult.individual_results">[1]</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.input_nodes">input_nodes (pyautocausal.orchestration.graph.ExecutableGraph property)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.InputNode">InputNode (class in pyautocausal.orchestration.nodes)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.base.Node.is_completed">is_completed() (pyautocausal.orchestration.base.Node method)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.orchestration.nodes.Node.is_completed">(pyautocausal.orchestration.nodes.Node method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.conditions.is_continuous">is_continuous() (in module pyautocausal.pipelines.library.conditions)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.is_execution_finished">is_execution_finished() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.is_lambda">is_lambda() (in module pyautocausal.orchestration.nodes)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.is_node_ready">is_node_ready() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.Node.is_passed">is_passed() (pyautocausal.orchestration.nodes.Node method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.base.Node.is_running">is_running() (pyautocausal.orchestration.base.Node method)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.orchestration.nodes.Node.is_running">(pyautocausal.orchestration.nodes.Node method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="K">K</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsConfig.keep">keep (pyautocausal.data_validation.checks.basic_checks.DuplicateRowsConfig attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.Node.mark_completed">mark_completed() (pyautocausal.orchestration.nodes.Node method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.Node.mark_failed">mark_failed() (pyautocausal.orchestration.nodes.Node method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.Node.mark_passed">mark_passed() (pyautocausal.orchestration.nodes.Node method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.Node.mark_running">mark_running() (pyautocausal.orchestration.nodes.Node method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.DecisionNode.mark_unreachable_nodes_as_passed">mark_unreachable_nodes_as_passed() (pyautocausal.orchestration.nodes.DecisionNode method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsConfig.max_duplicate_fraction">max_duplicate_fraction (pyautocausal.data_validation.checks.basic_checks.DuplicateRowsConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig.max_treated_fraction">max_treated_fraction (pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.merge_with">merge_with() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NonEmptyDataConfig.min_columns">min_columns (pyautocausal.data_validation.checks.basic_checks.NonEmptyDataConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig.min_control_count">min_control_count (pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig.min_control_units">min_control_units (pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig.min_never_treated_fraction">min_never_treated_fraction (pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig.min_post_periods">min_post_periods (pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig.min_pre_periods">min_pre_periods (pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NonEmptyDataConfig.min_rows">min_rows (pyautocausal.data_validation.checks.basic_checks.NonEmptyDataConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig.min_treated_count">min_treated_count (pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig.min_treated_fraction">min_treated_fraction (pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableConfig.min_variation_threshold">min_variation_threshold (pyautocausal.data_validation.checks.causal_checks.OutcomeVariableConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.model">model (pyautocausal.pipelines.library.specifications.DiDSpec attribute)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.model">(pyautocausal.pipelines.library.specifications.EventStudySpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec.model">(pyautocausal.pipelines.library.specifications.StaggeredDiDSpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.model">(pyautocausal.pipelines.library.specifications.SynthDIDSpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.model">(pyautocausal.pipelines.library.specifications.UpliftSpec attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.model_type">model_type (pyautocausal.pipelines.library.specifications.UpliftSpec attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.models">models (pyautocausal.pipelines.library.specifications.UpliftSpec attribute)</a>
+</li>
+      <li>
+    module
+
+      <ul>
+        <li><a href="api/index.html#module-pyautocausal.data_cleaning.cleaner">pyautocausal.data_cleaning.cleaner</a>
+</li>
+        <li><a href="api/index.html#module-pyautocausal.data_cleaning.planner">pyautocausal.data_cleaning.planner</a>
+</li>
+        <li><a href="api/index.html#module-pyautocausal.data_validation.checks.basic_checks">pyautocausal.data_validation.checks.basic_checks</a>
+</li>
+        <li><a href="api/index.html#module-pyautocausal.data_validation.checks.causal_checks">pyautocausal.data_validation.checks.causal_checks</a>
+</li>
+        <li><a href="api/index.html#module-pyautocausal.data_validation.validator_base">pyautocausal.data_validation.validator_base</a>
+</li>
+        <li><a href="api/index.html#module-pyautocausal.orchestration.base">pyautocausal.orchestration.base</a>
+</li>
+        <li><a href="api/index.html#module-pyautocausal.orchestration.graph">pyautocausal.orchestration.graph</a>
+</li>
+        <li><a href="api/index.html#module-pyautocausal.orchestration.nodes">pyautocausal.orchestration.nodes</a>
+</li>
+        <li><a href="api/index.html#module-pyautocausal.persistence.notebook_export">pyautocausal.persistence.notebook_export</a>
+</li>
+        <li><a href="api/index.html#module-pyautocausal.persistence.output_config">pyautocausal.persistence.output_config</a>
+</li>
+        <li><a href="api/index.html#module-pyautocausal.persistence.output_handler">pyautocausal.persistence.output_handler</a>
+</li>
+        <li><a href="api/index.html#module-pyautocausal.pipelines.library.conditions">pyautocausal.pipelines.library.conditions</a>
+</li>
+        <li><a href="api/index.html#module-pyautocausal.pipelines.library.estimators">pyautocausal.pipelines.library.estimators</a>
+</li>
+        <li><a href="api/index.html#module-pyautocausal.pipelines.library.plots">pyautocausal.pipelines.library.plots</a>
+</li>
+        <li><a href="api/index.html#module-pyautocausal.pipelines.library.specifications">pyautocausal.pipelines.library.specifications</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.N0">N0 (pyautocausal.pipelines.library.specifications.SynthDIDSpec attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.ColumnTypesCheck.name">name (pyautocausal.data_validation.checks.basic_checks.ColumnTypesCheck property)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsCheck.name">(pyautocausal.data_validation.checks.basic_checks.DuplicateRowsCheck property)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsCheck.name">(pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsCheck property)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NonEmptyDataCheck.name">(pyautocausal.data_validation.checks.basic_checks.NonEmptyDataCheck property)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.RequiredColumnsCheck.name">(pyautocausal.data_validation.checks.basic_checks.RequiredColumnsCheck property)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentCheck.name">(pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentCheck property)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsCheck.name">(pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsCheck property)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableCheck.name">(pyautocausal.data_validation.checks.causal_checks.OutcomeVariableCheck property)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureCheck.name">(pyautocausal.data_validation.checks.causal_checks.PanelStructureCheck property)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnCheck.name">(pyautocausal.data_validation.checks.causal_checks.TimeColumnCheck property)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationCheck.name">(pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationCheck property)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceCheck.name">(pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceCheck property)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsCheck.name">(pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsCheck property)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationCheck.name">(pyautocausal.data_validation.checks.causal_checks.TreatmentVariationCheck property)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.orchestration.base.Node.name">(pyautocausal.orchestration.base.Node attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.orchestration.base.Node">Node (class in pyautocausal.orchestration.base)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.orchestration.nodes.Node">(class in pyautocausal.orchestration.nodes)</a>
+</li>
+      </ul></li>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.NodeExecutionError">NodeExecutionError</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsCheck">NoDuplicateColumnsCheck (class in pyautocausal.data_validation.checks.basic_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsConfig">NoDuplicateColumnsConfig (class in pyautocausal.data_validation.checks.basic_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NonEmptyDataCheck">NonEmptyDataCheck (class in pyautocausal.data_validation.checks.basic_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NonEmptyDataConfig">NonEmptyDataConfig (class in pyautocausal.data_validation.checks.basic_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.persistence.notebook_export.NotebookExporter">NotebookExporter (class in pyautocausal.persistence.notebook_export)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.CrossSectionalSpec.outcome_col">outcome_col (pyautocausal.pipelines.library.specifications.CrossSectionalSpec attribute)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.outcome_col">(pyautocausal.pipelines.library.specifications.DiDSpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.outcome_col">(pyautocausal.pipelines.library.specifications.EventStudySpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec.outcome_col">(pyautocausal.pipelines.library.specifications.StaggeredDiDSpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.outcome_col">(pyautocausal.pipelines.library.specifications.SynthDIDSpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.outcome_col">(pyautocausal.pipelines.library.specifications.UpliftSpec attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableConfig.outcome_column">outcome_column (pyautocausal.data_validation.checks.causal_checks.OutcomeVariableConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableCheck">OutcomeVariableCheck (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableConfig">OutcomeVariableConfig (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableConfig.outlier_threshold">outlier_threshold (pyautocausal.data_validation.checks.causal_checks.OutcomeVariableConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.base.Node.output">output (pyautocausal.orchestration.base.Node attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.base.Node.output_config">output_config (pyautocausal.orchestration.base.Node attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.persistence.output_config.OutputConfig.output_filename">output_filename (pyautocausal.persistence.output_config.OutputConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.persistence.output_config.OutputConfig.output_type">output_type (pyautocausal.persistence.output_config.OutputConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.persistence.output_config.OutputConfig">OutputConfig (class in pyautocausal.persistence.output_config)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler">OutputHandler (class in pyautocausal.persistence.output_handler)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureCheck">PanelStructureCheck (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureConfig">PanelStructureConfig (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+      <li><a href="api/index.html#id0">passed (pyautocausal.data_validation.validator_base.AggregatedValidationResult attribute)</a>, <a href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult.passed">[1]</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.post_col">post_col (pyautocausal.pipelines.library.specifications.DiDSpec attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.print_graph">print_graph() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.propensity_score">propensity_score (pyautocausal.pipelines.library.specifications.UpliftSpec attribute)</a>
+</li>
+      <li>
+    pyautocausal.data_cleaning.cleaner
+
+      <ul>
+        <li><a href="api/index.html#module-pyautocausal.data_cleaning.cleaner">module</a>
+</li>
+      </ul></li>
+      <li>
+    pyautocausal.data_cleaning.planner
+
+      <ul>
+        <li><a href="api/index.html#module-pyautocausal.data_cleaning.planner">module</a>
+</li>
+      </ul></li>
+      <li>
+    pyautocausal.data_validation.checks.basic_checks
+
+      <ul>
+        <li><a href="api/index.html#module-pyautocausal.data_validation.checks.basic_checks">module</a>
+</li>
+      </ul></li>
+      <li>
+    pyautocausal.data_validation.checks.causal_checks
+
+      <ul>
+        <li><a href="api/index.html#module-pyautocausal.data_validation.checks.causal_checks">module</a>
+</li>
+      </ul></li>
+      <li>
+    pyautocausal.data_validation.validator_base
+
+      <ul>
+        <li><a href="api/index.html#module-pyautocausal.data_validation.validator_base">module</a>
+</li>
+      </ul></li>
+      <li>
+    pyautocausal.orchestration.base
+
+      <ul>
+        <li><a href="api/index.html#module-pyautocausal.orchestration.base">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    pyautocausal.orchestration.graph
+
+      <ul>
+        <li><a href="api/index.html#module-pyautocausal.orchestration.graph">module</a>
+</li>
+      </ul></li>
+      <li>
+    pyautocausal.orchestration.nodes
+
+      <ul>
+        <li><a href="api/index.html#module-pyautocausal.orchestration.nodes">module</a>
+</li>
+      </ul></li>
+      <li>
+    pyautocausal.persistence.notebook_export
+
+      <ul>
+        <li><a href="api/index.html#module-pyautocausal.persistence.notebook_export">module</a>
+</li>
+      </ul></li>
+      <li>
+    pyautocausal.persistence.output_config
+
+      <ul>
+        <li><a href="api/index.html#module-pyautocausal.persistence.output_config">module</a>
+</li>
+      </ul></li>
+      <li>
+    pyautocausal.persistence.output_handler
+
+      <ul>
+        <li><a href="api/index.html#module-pyautocausal.persistence.output_handler">module</a>
+</li>
+      </ul></li>
+      <li>
+    pyautocausal.pipelines.library.conditions
+
+      <ul>
+        <li><a href="api/index.html#module-pyautocausal.pipelines.library.conditions">module</a>
+</li>
+      </ul></li>
+      <li>
+    pyautocausal.pipelines.library.estimators
+
+      <ul>
+        <li><a href="api/index.html#module-pyautocausal.pipelines.library.estimators">module</a>
+</li>
+      </ul></li>
+      <li>
+    pyautocausal.pipelines.library.plots
+
+      <ul>
+        <li><a href="api/index.html#module-pyautocausal.pipelines.library.plots">module</a>
+</li>
+      </ul></li>
+      <li>
+    pyautocausal.pipelines.library.specifications
+
+      <ul>
+        <li><a href="api/index.html#module-pyautocausal.pipelines.library.specifications">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.reference_period">reference_period (pyautocausal.pipelines.library.specifications.EventStudySpec attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.relative_time_col">relative_time_col (pyautocausal.pipelines.library.specifications.EventStudySpec attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureConfig.require_balanced">require_balanced (pyautocausal.data_validation.checks.causal_checks.PanelStructureConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableConfig.require_numeric">require_numeric (pyautocausal.data_validation.checks.causal_checks.OutcomeVariableConfig attribute)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnConfig.require_numeric">(pyautocausal.data_validation.checks.causal_checks.TimeColumnConfig attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnConfig.require_sequential">require_sequential (pyautocausal.data_validation.checks.causal_checks.TimeColumnConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.RequiredColumnsConfig.required_columns">required_columns (pyautocausal.data_validation.checks.basic_checks.RequiredColumnsConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.RequiredColumnsCheck">RequiredColumnsCheck (class in pyautocausal.data_validation.checks.basic_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.RequiredColumnsConfig">RequiredColumnsConfig (class in pyautocausal.data_validation.checks.basic_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.persistence.notebook_export.NotebookExporter.run_existing_notebook_to_html">run_existing_notebook_to_html() (pyautocausal.persistence.notebook_export.NotebookExporter method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.save">save() (pyautocausal.persistence.output_handler.OutputHandler method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.save_bytes">save_bytes() (pyautocausal.persistence.output_handler.OutputHandler method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.save_csv">save_csv() (pyautocausal.persistence.output_handler.OutputHandler method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.save_json">save_json() (pyautocausal.persistence.output_handler.OutputHandler method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.SAVE_METHOD_MAP">SAVE_METHOD_MAP (pyautocausal.persistence.output_handler.OutputHandler attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.save_node_output">save_node_output() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.save_parquet">save_parquet() (pyautocausal.persistence.output_handler.OutputHandler method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.save_pickle">save_pickle() (pyautocausal.persistence.output_handler.OutputHandler method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.save_png">save_png() (pyautocausal.persistence.output_handler.OutputHandler method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.persistence.output_handler.OutputHandler.save_text">save_text() (pyautocausal.persistence.output_handler.OutputHandler method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.InputNode.set_input">set_input() (pyautocausal.orchestration.nodes.InputNode method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.spec_constructor">spec_constructor() (in module pyautocausal.pipelines.library.specifications)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec">StaggeredDiDSpec (class in pyautocausal.pipelines.library.specifications)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsConfig.subset">subset (pyautocausal.data_validation.checks.basic_checks.DuplicateRowsConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#id2">summary (pyautocausal.data_validation.validator_base.AggregatedValidationResult attribute)</a>, <a href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult.summary">[1]</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec">SynthDIDSpec (class in pyautocausal.pipelines.library.specifications)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.T0">T0 (pyautocausal.pipelines.library.specifications.SynthDIDSpec attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.time_col">time_col (pyautocausal.pipelines.library.specifications.DiDSpec attribute)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.time_col">(pyautocausal.pipelines.library.specifications.EventStudySpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec.time_col">(pyautocausal.pipelines.library.specifications.StaggeredDiDSpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.time_col">(pyautocausal.pipelines.library.specifications.SynthDIDSpec attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig.time_column">time_column (pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig attribute)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureConfig.time_column">(pyautocausal.data_validation.checks.causal_checks.PanelStructureConfig attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnConfig.time_column">(pyautocausal.data_validation.checks.causal_checks.TimeColumnConfig attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationConfig.time_column">(pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationConfig attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceConfig.time_column">(pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceConfig attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsConfig.time_column">(pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsConfig attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnCheck">TimeColumnCheck (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnConfig">TimeColumnConfig (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationCheck">TimePeriodStandardizationCheck (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationConfig">TimePeriodStandardizationConfig (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.validator_base.AggregatedValidationResult.to_string">to_string() (pyautocausal.data_validation.validator_base.AggregatedValidationResult method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.to_text">to_text() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.to_yaml">to_yaml() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.CrossSectionalSpec.treatment_cols">treatment_cols (pyautocausal.pipelines.library.specifications.CrossSectionalSpec attribute)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.treatment_cols">(pyautocausal.pipelines.library.specifications.DiDSpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.treatment_cols">(pyautocausal.pipelines.library.specifications.EventStudySpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec.treatment_cols">(pyautocausal.pipelines.library.specifications.StaggeredDiDSpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.treatment_cols">(pyautocausal.pipelines.library.specifications.SynthDIDSpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.treatment_cols">(pyautocausal.pipelines.library.specifications.UpliftSpec attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentConfig.treatment_column">treatment_column (pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentConfig attribute)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig.treatment_column">(pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureConfig.treatment_column">(pyautocausal.data_validation.checks.causal_checks.PanelStructureConfig attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationConfig.treatment_column">(pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationConfig attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceConfig.treatment_column">(pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceConfig attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsConfig.treatment_column">(pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsConfig attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig.treatment_column">(pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec.treatment_time_col">treatment_time_col (pyautocausal.pipelines.library.specifications.StaggeredDiDSpec attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceCheck">TreatmentPersistenceCheck (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceConfig">TreatmentPersistenceConfig (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsCheck">TreatmentTimingPatternsCheck (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsConfig">TreatmentTimingPatternsConfig (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationCheck">TreatmentVariationCheck (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationConfig">TreatmentVariationConfig (class in pyautocausal.data_validation.checks.causal_checks)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.ColumnTypesConfig.type_checkers">type_checkers (pyautocausal.data_validation.checks.basic_checks.ColumnTypesConfig attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.DiDSpec.unit_col">unit_col (pyautocausal.pipelines.library.specifications.DiDSpec attribute)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.EventStudySpec.unit_col">(pyautocausal.pipelines.library.specifications.EventStudySpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.StaggeredDiDSpec.unit_col">(pyautocausal.pipelines.library.specifications.StaggeredDiDSpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.unit_col">(pyautocausal.pipelines.library.specifications.SynthDIDSpec attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec.unit_col">(pyautocausal.pipelines.library.specifications.UpliftSpec attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig.unit_column">unit_column (pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsConfig attribute)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureConfig.unit_column">(pyautocausal.data_validation.checks.causal_checks.PanelStructureConfig attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceConfig.unit_column">(pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceConfig attribute)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsConfig.unit_column">(pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsConfig attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api/index.html#pyautocausal.persistence.output_handler.UnsupportedOutputTypeError">UnsupportedOutputTypeError</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.UpliftSpec">UpliftSpec (class in pyautocausal.pipelines.library.specifications)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentConfig.valid_values">valid_values (pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentConfig attribute)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.ColumnTypesCheck.validate">validate() (pyautocausal.data_validation.checks.basic_checks.ColumnTypesCheck method)</a>
+
+      <ul>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.DuplicateRowsCheck.validate">(pyautocausal.data_validation.checks.basic_checks.DuplicateRowsCheck method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsCheck.validate">(pyautocausal.data_validation.checks.basic_checks.NoDuplicateColumnsCheck method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.NonEmptyDataCheck.validate">(pyautocausal.data_validation.checks.basic_checks.NonEmptyDataCheck method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.basic_checks.RequiredColumnsCheck.validate">(pyautocausal.data_validation.checks.basic_checks.RequiredColumnsCheck method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentCheck.validate">(pyautocausal.data_validation.checks.causal_checks.BinaryTreatmentCheck method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsCheck.validate">(pyautocausal.data_validation.checks.causal_checks.CausalMethodRequirementsCheck method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.OutcomeVariableCheck.validate">(pyautocausal.data_validation.checks.causal_checks.OutcomeVariableCheck method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.PanelStructureCheck.validate">(pyautocausal.data_validation.checks.causal_checks.PanelStructureCheck method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimeColumnCheck.validate">(pyautocausal.data_validation.checks.causal_checks.TimeColumnCheck method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationCheck.validate">(pyautocausal.data_validation.checks.causal_checks.TimePeriodStandardizationCheck method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceCheck.validate">(pyautocausal.data_validation.checks.causal_checks.TreatmentPersistenceCheck method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsCheck.validate">(pyautocausal.data_validation.checks.causal_checks.TreatmentTimingPatternsCheck method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.checks.causal_checks.TreatmentVariationCheck.validate">(pyautocausal.data_validation.checks.causal_checks.TreatmentVariationCheck method)</a>
+</li>
+        <li><a href="api/index.html#pyautocausal.data_validation.validator_base.DataValidator.validate">(pyautocausal.data_validation.validator_base.DataValidator method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.Node.validate_action_function_static">validate_action_function_static() (pyautocausal.orchestration.nodes.Node method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.validate_and_prepare_data">validate_and_prepare_data() (in module pyautocausal.pipelines.library.specifications)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.nodes.DecisionNode.validate_branches">validate_branches() (pyautocausal.orchestration.nodes.DecisionNode method)</a>
+</li>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.validate_node_graph_consistency">validate_node_graph_consistency() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.when_false">when_false() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.orchestration.graph.ExecutableGraph.when_true">when_true() (pyautocausal.orchestration.graph.ExecutableGraph method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="X">X</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.X">X (pyautocausal.pipelines.library.specifications.SynthDIDSpec attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Y">Y</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/index.html#pyautocausal.pipelines.library.specifications.SynthDIDSpec.Y">Y (pyautocausal.pipelines.library.specifications.SynthDIDSpec attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Nicholas Topousis, Yogam Tchokni.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
